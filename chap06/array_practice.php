@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>配列の練習</title>
+    <style>
+        table{
+            background-color: #999;
+        }
+        table tbody th,
+        table tbody td{
+            background-color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -143,6 +152,24 @@
         </table>
     */
     ?>
+    <table>
+        <thead>
+            <th>チーム名</th>
+            <th>名前</th>
+            <th>役割</th>
+        </thead>
+        <tbody>
+            <?php foreach ($room_6c as $team_name => $team): ?>
+                <?php foreach ($team as $member): ?>
+                    <tr>
+                        <td><?php echo $team_name ?></td>
+                        <td><?php echo $member["name"] ?></td>
+                        <td><?php echo $member["role"] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 
 </body>
 
